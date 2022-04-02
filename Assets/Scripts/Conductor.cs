@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static GameConsts;
 
 // From https://www.gamedeveloper.com/audio/coding-to-the-beat---under-the-hood-of-a-rhythm-game-in-unity
 public class Conductor : MonoBehaviour
 {
-    private const float MIN_ACCURACY = 0.1f;
-
     public List<Song> Songs;
 
     //Song beats per minute
@@ -111,7 +110,7 @@ public class Conductor : MonoBehaviour
         }
     }
 
-    public static float SongPositionInBeats { get => instance.songPositionInBeats; }
+    public static int SongPositionInBeats { get => Mathf.FloorToInt(instance.songPositionInBeats); }
 }
 
 [System.Serializable]

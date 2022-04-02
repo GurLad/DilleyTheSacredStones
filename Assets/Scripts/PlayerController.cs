@@ -1,16 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static GameConsts;
 
 public class PlayerController : MonoBehaviour
 {
-    private static readonly Vector2Int MAX_COORDS = new Vector2Int(1, 1);
-    private static readonly Vector2Int MIN_COORDS = new Vector2Int(-1, -1);
+    public static float ZPos { get => current.PlayerObject.transform.position.z; }
+    public static Vector2Int Coords { get => current.coords; }
 
     public float ForwardSpeed;
     public float MoveSpeed;
     public float RotationSpeed;
-    public float ShipSize;
     public Rigidbody PlayerObject;
     public Transform ShipModel;
     private Vector2Int coords = Vector2Int.zero;
@@ -19,6 +19,12 @@ public class PlayerController : MonoBehaviour
     private bool moving { get => movingToCoords.x <= MAX_COORDS.x; }
     private float count;
     private Vector2Int lastInput;
+    private static PlayerController current;
+
+    private void Awake()
+    {
+        current = this;
+    }
 
     private void Update()
     {
@@ -56,9 +62,11 @@ public class PlayerController : MonoBehaviour
             {
                 count = 1;
             }
-            PlayerObject.MovePosition(new Vector3(ShipSize * (coords.x * (1 - count) + movingToCoords.x * count), ShipSize * (coords.y * (1 - count) + movingToCoords.y * count), PlayerObject.transform.localPosition.z));
+            float percent = -(Mathf.Sin(count * Mathf.PI + Mathf.PI / 2)) / 2 + 0.5f;
+            PlayerObject.MovePosition(new Vector3(SHIP_SIZE * (coords.x * (1 - percent) + movingToCoords.x * percent), SHIP_SIZE * (coords.y * (1 - percent) + movingToCoords.y * count), PlayerObject.transform.localPosition.z));
             Vector2Int diff = coords - movingToCoords;
-            ShipModel.localEulerAngles = new Vector3(diff.y * Mathf.Sin(count * Mathf.PI), -diff.x * Mathf.Sin(count * Mathf.PI)) * RotationSpeed;
+            float smoothValue = Mathf.Sin(count * Mathf.PI);
+            ShipModel.localEulerAngles = new Vector3(diff.y * smoothValue, -diff.x * smoothValue) * RotationSpeed;
             if (count >= 1)
             {
                 coords = movingToCoords;
