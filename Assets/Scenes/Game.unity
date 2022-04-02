@@ -284,7 +284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemies:
   - Name: Basic
-    Object: {fileID: 3212880401288074009, guid: d558e57269254d340b7c9b585a9cd966, type: 3}
+    Object: {fileID: 2152539754460088238, guid: d558e57269254d340b7c9b585a9cd966, type: 3}
   Level: {fileID: 4900000, guid: 192e350100fa0ad4f8f489bc0cd6cf09, type: 3}
 --- !u!1 &643390755
 GameObject:
