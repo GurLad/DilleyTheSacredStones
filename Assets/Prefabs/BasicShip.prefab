@@ -48,11 +48,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Explosion: {fileID: 3802753158492964203, guid: ea3c490c9e183ed408e35545b0df2713, type: 3}
-  StartOffset: {x: 0, y: 15, z: 20}
-  TargetOffset: {x: 0, y: 0, z: 5}
+  StartOffset: {x: 0, y: 15, z: 25}
+  TargetOffset: {x: 0, y: 0, z: 8}
   OutsideOffset: {x: 15, y: 0, z: 0}
   ReachingPosBeats: 2
-  ProjectileChargeBeats: 2
+  ProjectileChargeBeats: 3
   LeavingPosBeats: 2
   Renderer: {fileID: 7372890798826697594}
   GlowMaterialID: 2
@@ -211,7 +211,7 @@ Transform:
   m_GameObject: {fileID: 5971180496993703889}
   m_LocalRotation: {x: -0, y: 0.7072302, z: 0.7069834, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.70000005, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8565097721686700248}

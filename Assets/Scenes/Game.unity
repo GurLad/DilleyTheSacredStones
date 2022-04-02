@@ -385,7 +385,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Songs:
   - Name: Test
-    AudioClip: {fileID: 8300000, guid: ce225915a37a50448b1c8265a93daee9, type: 3}
+    AudioClip: {fileID: 8300000, guid: f4d83384dd013b14d9f5121af9ff0c31, type: 3}
     BPM: 120
     BeatsPerLoop: 4
     FirstBeatOffset: 0
