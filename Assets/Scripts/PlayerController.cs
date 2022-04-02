@@ -13,12 +13,19 @@ public class PlayerController : MonoBehaviour
     public float RotationSpeed;
     public Rigidbody PlayerObject;
     public Transform ShipModel;
+    [Header("Projectiles")]
+    public float ProjectileCooldown;
+    public Rigidbody ProjectileObject;
+    public float ProjectileRelativeSpeed;
+    public Vector3 ProjectileOffset;
     private Vector2Int coords = Vector2Int.zero;
     // Move vars
     private Vector2Int movingToCoords = MAX_COORDS + Vector2Int.right;
     private bool moving { get => movingToCoords.x <= MAX_COORDS.x; }
     private float count;
     private Vector2Int lastInput;
+    // Projectile vars
+    private float cooldown;
     private static PlayerController current;
 
     private void Awake()
@@ -30,6 +37,7 @@ public class PlayerController : MonoBehaviour
     {
         MoveXY();
         MoveZ();
+        Projectile();
     }
 
     private void MoveXY()
@@ -79,5 +87,17 @@ public class PlayerController : MonoBehaviour
     private void MoveZ()
     {
         PlayerObject.velocity = new Vector3(0, 0, ForwardSpeed);
+    }
+
+    private void Projectile()
+    {
+        if (!moving && Control.GetButtonDown(Control.CB.A) && cooldown <= 0)
+        {
+            Rigidbody newProjectile = Instantiate(ProjectileObject.gameObject).GetComponent<Rigidbody>();
+            newProjectile.velocity = new Vector3(0, 0, ProjectileRelativeSpeed + ForwardSpeed);
+            newProjectile.transform.position = PlayerObject.transform.position + ProjectileOffset;
+            cooldown = ProjectileCooldown;
+        }
+        cooldown -= Time.deltaTime;
     }
 }

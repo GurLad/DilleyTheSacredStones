@@ -6,7 +6,7 @@ public class InitControls : MonoBehaviour
 {
     private void Awake()
     {
-        Control.SetButton(Control.CB.A, KeyCode.X);
+        Control.SetButton(Control.CB.A, KeyCode.Space);
         Control.SetButton(Control.CB.B, KeyCode.Z);
         Control.SetButton(Control.CB.Select, KeyCode.C);
         Control.SetButton(Control.CB.Start, KeyCode.Return);
