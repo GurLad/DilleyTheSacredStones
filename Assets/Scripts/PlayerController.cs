@@ -7,12 +7,15 @@ public class PlayerController : MonoBehaviour
 {
     public static float ZPos { get => current.PlayerObject.transform.position.z; }
     public static Vector2Int Coords { get => current.coords; }
+    private static PlayerController current;
 
     public float ForwardSpeed;
     public float MoveSpeed;
     public float RotationSpeed;
+    public float InvincibilityTime;
     public Rigidbody PlayerObject;
     public Transform ShipModel;
+    public GameObject Explosion;
     [Header("Projectiles")]
     public float ProjectileCooldown;
     public Projectile ProjectileObject;
@@ -26,7 +29,8 @@ public class PlayerController : MonoBehaviour
     private Vector2Int lastInput;
     // Projectile vars
     private float cooldown;
-    private static PlayerController current;
+    // Damage vars
+    private float hitCooldown;
 
     private void Awake()
     {
@@ -38,6 +42,7 @@ public class PlayerController : MonoBehaviour
         MoveXY();
         MoveZ();
         ProjectileInput();
+        hitCooldown -= Time.deltaTime;
     }
 
     private void MoveXY()
@@ -98,5 +103,18 @@ public class PlayerController : MonoBehaviour
             cooldown = ProjectileCooldown;
         }
         cooldown -= Time.deltaTime;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "EnemyProjectile")
+        {
+            Destroy(other.gameObject);
+            if (hitCooldown <= 0)
+            {
+                Instantiate(Explosion).transform.position = transform.position;
+                hitCooldown = InvincibilityTime;
+            }
+        }
     }
 }

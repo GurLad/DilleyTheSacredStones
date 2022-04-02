@@ -11,6 +11,7 @@ public class BasicShip : AEnemy
     public Vector3 TargetOffset;
     public Vector3 OutsideOffset;
     public int ReachingPosBeats;
+    public int ProjectileChargeBeats;
     public int LeavingPosBeats;
     public MeshRenderer Renderer;
     public int GlowMaterialID;
@@ -60,19 +61,29 @@ public class BasicShip : AEnemy
                 }
                 break;
             case Mode.Shooting:
-                if (Conductor.SongPositionInBeats == spawnBeat)
+                transform.position = TargetOffset + new Vector3(0, 0, PlayerController.ZPos);
+                if (ProjectileObject != null)
                 {
-                    transform.position = TargetOffset + new Vector3(0, 0, PlayerController.ZPos);
-                    Renderer.materials[GlowMaterialID].color = new Color(Conductor.TimeSinceLastBeat, 0, 0);
+                    if (spawnBeat + ProjectileChargeBeats > Conductor.SongPositionInBeats)
+                    {
+                        percent = Mathf.Min(1, ((Conductor.SongPositionInBeats - spawnBeat) + Conductor.TimeSinceLastBeat) / ProjectileChargeBeats);
+                        Renderer.materials[GlowMaterialID].color = new Color(percent, 0, 0);
+                    }
+                    else
+                    {
+                        // Generate projectile
+                        GameObject projectile = Instantiate(ProjectileObject);
+                        projectile.transform.position = transform.position + ProjectileOffset;
+                        spawnBeat = Conductor.SongPositionInBeats;
+                        ProjectileObject = null;
+                        Renderer.materials[GlowMaterialID].color = Color.black;
+                    }
                 }
-                else
+                else if (Conductor.SongPositionInBeats > spawnBeat)
                 {
-                    Renderer.materials[GlowMaterialID].color = Color.black;
+                    // Finish
                     mode = Mode.Leaving;
                     spawnBeat = Conductor.SongPositionInBeats;
-                    // Generate projectile
-                    GameObject projectile = Instantiate(ProjectileObject);
-                    projectile.transform.position = transform.position + ProjectileOffset;
                 }
                 break;
             case Mode.Leaving:

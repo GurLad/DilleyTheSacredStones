@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4594156805247955174}
   - component: {fileID: 2152539754460088238}
   - component: {fileID: 8722972440157643853}
+  - component: {fileID: 1070355920884806976}
   m_Layer: 0
   m_Name: BasicShip
   m_TagString: Untagged
@@ -46,10 +47,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c80c7613b081fc041955c95f39b43bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Explosion: {fileID: 3802753158492964203, guid: ea3c490c9e183ed408e35545b0df2713, type: 3}
   StartOffset: {x: 0, y: 15, z: 20}
   TargetOffset: {x: 0, y: 0, z: 5}
   OutsideOffset: {x: 15, y: 0, z: 0}
   ReachingPosBeats: 2
+  ProjectileChargeBeats: 2
   LeavingPosBeats: 2
   Renderer: {fileID: 7372890798826697594}
   GlowMaterialID: 2
@@ -70,6 +73,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rate: 6
   Strength: 5
+--- !u!54 &1070355920884806976
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4594156805247955173}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &5565370614167332351
 GameObject:
   m_ObjectHideFlags: 0

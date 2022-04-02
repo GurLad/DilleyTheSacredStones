@@ -81,8 +81,10 @@ MonoBehaviour:
   ForwardSpeed: 5
   MoveSpeed: 5
   RotationSpeed: 50
+  InvincibilityTime: 0.1
   PlayerObject: {fileID: 661362468033521833}
   ShipModel: {fileID: 661362468024780428}
+  Explosion: {fileID: 3244557516319802877, guid: 6b9bec2ce5506da4abb9111491839373, type: 3}
   ProjectileCooldown: 0.2
   ProjectileObject: {fileID: 2878068188380312804, guid: 553ef5d99a380a242b58a251a5ac35a8, type: 3}
   ProjectileRelativeSpeed: 20
