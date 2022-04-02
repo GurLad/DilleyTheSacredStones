@@ -384,6 +384,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Songs:
+  - Name: Inevitable
+    AudioClip: {fileID: 8300000, guid: 3b63df0d46f2e264580b3beb8c447653, type: 3}
+    BPM: 120
+    BeatsPerLoop: 96
+    FirstBeatOffset: 0
   - Name: Test
     AudioClip: {fileID: 8300000, guid: f4d83384dd013b14d9f5121af9ff0c31, type: 3}
     BPM: 120

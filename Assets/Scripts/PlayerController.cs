@@ -16,12 +16,14 @@ public class PlayerController : MonoBehaviour
     public Rigidbody PlayerObject;
     public Transform ShipModel;
     public GameObject Explosion;
+    public AudioClip MoveSFX;
     [Header("Projectiles")]
     public float ProjectileCooldown;
     public Projectile ProjectileObject;
     public float ProjectileRelativeSpeed;
     public Vector3 ProjectileOffset;
     private Vector2Int coords = Vector2Int.zero;
+    private AudioSource audioSource;
     // Move vars
     private Vector2Int movingToCoords = MAX_COORDS + Vector2Int.right;
     private bool moving { get => movingToCoords.x <= MAX_COORDS.x; }
@@ -35,6 +37,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         current = this;
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -60,6 +63,7 @@ public class PlayerController : MonoBehaviour
                 {
                     movingToCoords = targetPos;
                     count = 0;
+                    audioSource.PlayOneShot(MoveSFX);
                 }
             }
             lastInput = Vector2Int.zero;
