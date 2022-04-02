@@ -5,24 +5,18 @@ using UnityEngine;
 public class CameraHolder : MonoBehaviour
 {
     private static CameraHolder current;
-    public List<CameraObject> Cameras;
-    private CameraObject currentCamera;
+    public List<Camera> Cameras;
+    private Camera currentCamera;
 
     private void Awake()
     {
         current = this;
+        Cameras.ForEach(a => a.gameObject.SetActive(false));
     }
 
     public static void SetCamera(string name)
     {
-        current.currentCamera?.Camera.gameObject.SetActive(false);
-        (current.currentCamera = current.Cameras.Find(a => a.Name.ToLower() == name.ToLower()))?.Camera.gameObject.SetActive(true);
+        current.currentCamera?.gameObject.SetActive(false);
+        (current.currentCamera = current.Cameras.Find(a => a.name.ToLower() == name.ToLower()))?.gameObject.SetActive(true);
     }
-}
-
-[System.Serializable]
-public record CameraObject
-{
-    public string Name;
-    public Camera Camera;
 }

@@ -14,7 +14,7 @@ public class CutsceneController : MonoBehaviour
     //private float count;
     //private int direction;
 
-    private void Start()
+    private void Awake()
     {
         Instance = this;
         //fullSize = Border1.rectTransform.sizeDelta.y;
