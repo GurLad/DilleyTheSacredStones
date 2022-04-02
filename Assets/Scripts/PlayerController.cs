@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public float MoveSpeed;
     public float RotationSpeed;
     public float ShipSize;
-    public Transform PlayerObject;
+    public Rigidbody PlayerObject;
     public Transform ShipModel;
     private Vector2Int coords = Vector2Int.zero;
     // Move vars
@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
             {
                 count = 1;
             }
-            PlayerObject.transform.localPosition = new Vector3(ShipSize * (coords.x * (1 - count) + movingToCoords.x * count), ShipSize * (coords.y * (1 - count) + movingToCoords.y * count), PlayerObject.transform.localPosition.z);
+            PlayerObject.MovePosition(new Vector3(ShipSize * (coords.x * (1 - count) + movingToCoords.x * count), ShipSize * (coords.y * (1 - count) + movingToCoords.y * count), PlayerObject.transform.localPosition.z));
             Vector2Int diff = coords - movingToCoords;
             ShipModel.localEulerAngles = new Vector3(diff.y * Mathf.Sin(count * Mathf.PI), -diff.x * Mathf.Sin(count * Mathf.PI)) * RotationSpeed;
             if (count >= 1)
@@ -70,6 +70,6 @@ public class PlayerController : MonoBehaviour
 
     private void MoveZ()
     {
-        PlayerObject.transform.localPosition += new Vector3(0, 0, ForwardSpeed * Time.deltaTime);
+        PlayerObject.velocity = new Vector3(0, 0, ForwardSpeed);
     }
 }
