@@ -5,64 +5,62 @@ using UnityEngine;
 // From https://www.gamedeveloper.com/audio/coding-to-the-beat---under-the-hood-of-a-rhythm-game-in-unity
 public class Conductor : MonoBehaviour
 {
+    private const float MIN_ACCURACY = 0.1f;
+
+    public List<Song> Songs;
+
     //Song beats per minute
     //This is determined by the song you're trying to sync up to
-    public float songBpm;
+    private float songBpm;
 
     //The number of seconds for each song beat
-    public float secPerBeat;
+    private float secPerBeat;
 
     //Current song position, in seconds
-    public float songPosition;
+    private float songPosition;
 
     //Current song position, in beats
-    public float songPositionInBeats;
+    private float songPositionInBeats;
 
     //How many seconds have passed since the song started
-    public float dspSongTime;
+    private float dspSongTime;
 
     //an AudioSource attached to this GameObject that will play the music.
-    public AudioSource musicSource;
+    private AudioSource musicSource;
 
     //The offset to the first beat of the song in seconds
-    public float firstBeatOffset;
+    private float firstBeatOffset;
 
     //the number of beats in each loop
-    public float beatsPerLoop;
+    private float beatsPerLoop;
 
     //the total number of loops completed since the looping clip first started
-    public int completedLoops = 0;
+    private int completedLoops = 0;
 
     //The current position of the song within the loop in beats.
-    public float loopPositionInBeats;
+    private float loopPositionInBeats;
 
     //The current relative position of the song within the loop measured between 0 and 1.
-    public float loopPositionInAnalog;
+    private float loopPositionInAnalog;
+
+    private float positionInBeat { get => loopPositionInAnalog * beatsPerLoop % 1; }
 
     //Conductor instance
-    public static Conductor instance;
+    private static Conductor instance;
 
-    void Awake()
+    private void Awake()
     {
         instance = this;
     }
 
-    void Start()
+    private void Start()
     {
         //Load the AudioSource attached to the Conductor GameObject
         musicSource = GetComponent<AudioSource>();
-
-        //Calculate the number of seconds in each beat
-        secPerBeat = 60f / songBpm;
-
-        //Record the time when the music starts
-        dspSongTime = (float)AudioSettings.dspTime;
-
-        //Start the music
-        musicSource.Play();
+        PlaySong(Songs[0].Name);
     }
 
-    void Update()
+    private void Update()
     {
         //determine how many seconds since the song started
         songPosition = (float)(AudioSettings.dspTime - dspSongTime - firstBeatOffset);
@@ -77,4 +75,51 @@ public class Conductor : MonoBehaviour
 
         loopPositionInAnalog = loopPositionInBeats / beatsPerLoop;
     }
+
+    private void LoadSongInfo(Song song)
+    {
+        songBpm = song.BPM;
+        beatsPerLoop = song.BeatsPerLoop;
+        firstBeatOffset = song.FirstBeatOffset;
+        completedLoops = 0;
+
+        //Calculate the number of seconds in each beat
+        secPerBeat = 60f / songBpm;
+
+        //Record the time when the music starts
+        dspSongTime = (float)AudioSettings.dspTime;
+
+        //Start the music
+        musicSource.Stop();
+        musicSource.clip = song.AudioClip;
+        musicSource.Play();
+    }
+
+    public static void PlaySong(string name)
+    {
+        instance.LoadSongInfo(instance.Songs.Find(a => a.Name == name));
+    }
+
+    public static float TimeSinceLastBeat { get => instance.positionInBeat; }
+
+    public static float BeatAccuracy
+    {
+        get
+        {
+            float trueAccuracy = 0.5f - Mathf.Min(instance.positionInBeat, 1 - instance.positionInBeat);
+            return trueAccuracy < MIN_ACCURACY ? (MIN_ACCURACY - trueAccuracy) / MIN_ACCURACY : 0;
+        }
+    }
+
+    public static float SongPositionInBeats { get => instance.songPositionInBeats; }
+}
+
+[System.Serializable]
+public record Song
+{
+    public string Name;
+    public AudioClip AudioClip;
+    public float BPM;
+    public float BeatsPerLoop;
+    public float FirstBeatOffset;
 }

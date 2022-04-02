@@ -1,18 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BeatDisplay : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Image BeatIcon;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        BeatIcon.color = new Color(1, 1 - Conductor.TimeSinceLastBeat / 2, 1 - Conductor.TimeSinceLastBeat / 2);
     }
 }
