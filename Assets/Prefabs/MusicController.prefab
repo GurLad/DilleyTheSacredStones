@@ -46,9 +46,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b797bb2011209554a9c695bc05a7c30a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Tracks: []
+  Tracks:
+  - Name: Ambient
+    AudioClip: {fileID: 8300000, guid: c8c0a100024044d4783170cb12e13990, type: 3}
+  - Name: Silence
+    AudioClip: {fileID: 8300000, guid: d360b5275e61524469dd0d4303ba7247, type: 3}
   FadeSpeed: 1
-  Volume: 1
+  Volume: 0.7
   PlayOnStart: 0
   KeepTimestamp: 0
   Playing: 

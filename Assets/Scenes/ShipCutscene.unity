@@ -252,7 +252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: Ahem, let's go get the spacetime stone. To Botland!
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: 691a8faf6ff6cf54e95e59470c51cb21, type: 3}
   Lifespan: 3
 --- !u!114 &27142456
 MonoBehaviour:
@@ -420,7 +420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: A transmission, eh? Let's hear them out.
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: d6366c59b6cafd1428a1ba7452393638, type: 3}
   Lifespan: 3
 --- !u!114 &79160675
 MonoBehaviour:
@@ -588,7 +588,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: AM
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: 44f5d4b02290e8544a3cba394cce9b26, type: 3}
   Lifespan: 1
 --- !u!114 &88940662
 MonoBehaviour:
@@ -679,7 +679,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: Although this does put a smile on my face!
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: 8051f6ed43fb81347952d2ad57b91c83, type: 3}
   Lifespan: 3
 --- !u!114 &106169789
 MonoBehaviour:
@@ -949,7 +949,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: You should've gone for the head, General India!
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: 218ba8dc3d2ffb14b9ee48f5b55a48a5, type: 3}
   Lifespan: 4
 --- !u!114 &114145378
 MonoBehaviour:
@@ -1039,7 +1039,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: Let's go to get the first stone - from Threa!
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: e3415d8f2c0da7a4697151f851c14e8b, type: 3}
   Lifespan: 3
 --- !u!114 &146999680
 MonoBehaviour:
@@ -1459,7 +1459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: Oh my! So evil!
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: c7672d1e2d7c48f4eaac6d6cca28e48a, type: 3}
   Lifespan: 2
 --- !u!114 &215001532
 MonoBehaviour:
@@ -1992,8 +1992,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TrackDone: 1
-  Text: But I arrive all the same!
-  VoiceOver: {fileID: 0}
+  Text: Yet I arrive all the same!
+  VoiceOver: {fileID: 8300000, guid: 0b0a1305c48ddfe4e80bd15a1177592a, type: 3}
   Lifespan: 3
 --- !u!114 &240259967
 MonoBehaviour:
@@ -2160,7 +2160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: I think not. I'm Dilley. I'm here to eat your pathetic little planet.
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: a37c2906045166044908928454755ad6, type: 3}
   Lifespan: 4
 --- !u!114 &261410438
 MonoBehaviour:
@@ -2323,7 +2323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: Wow! I can't wait to see your power.
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: 5a590f67de08d6b40ae5b9533b5d2b0a, type: 3}
   Lifespan: 3
 --- !u!114 &347746636
 MonoBehaviour:
@@ -2509,7 +2509,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: Nevermind. You! I'm about to eat your planer!
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: 308c04ed81f9506478684322f08069da, type: 3}
   Lifespan: 4
 --- !u!114 &403285590
 MonoBehaviour:
@@ -2756,8 +2756,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TrackDone: 1
-  Text: Double the world's population!
-  VoiceOver: {fileID: 0}
+  Text: Double the universe's population!
+  VoiceOver: {fileID: 8300000, guid: 3a6cee482b3878147b3ecd5778a16691, type: 3}
   Lifespan: 3
 --- !u!114 &460110744
 MonoBehaviour:
@@ -3062,7 +3062,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: Ah! Where did you come from?!
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: 2c27d6ace59c52145aaebda4200d658a, type: 3}
   Lifespan: 3
 --- !u!114 &528130064
 MonoBehaviour:
@@ -3299,7 +3299,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: Ha! You can fear me. You can even try running from me.
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: 94a751793456c7549b1bec0a636277c6, type: 3}
   Lifespan: 4
 --- !u!114 &559393013
 MonoBehaviour:
@@ -3404,7 +3404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: Hey, grunts. I have a new neferious plan.
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: 01b1372cd0be7d944b9a63c7fb8e9e22, type: 3}
   Lifespan: 2
 --- !u!114 &569418901
 MonoBehaviour:
@@ -3496,7 +3496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: Yay, the time stone!
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: 3414745b21a95e84e8ab79db3109c67c, type: 3}
   Lifespan: 2
 --- !u!114 &630457520
 MonoBehaviour:
@@ -3761,7 +3761,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: We're being hailed, master.
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: 9253bdce3e75997499b41fec7bc25ea9, type: 3}
   Lifespan: 5
 --- !u!114 &665664415
 MonoBehaviour:
@@ -3960,7 +3960,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: What is it, master?
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: 923fec2e7d3d3204993bd85db375a20a, type: 3}
   Lifespan: 1
 --- !u!114 &685220063
 MonoBehaviour:
@@ -4167,7 +4167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: Botland. The last planet. I'm going to enjoy destroying it very, very much.
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: c991f24e09388ea49aed1afdb5f9b7b9, type: 3}
   Lifespan: 4
 --- !u!114 &692057083
 MonoBehaviour:
@@ -4932,7 +4932,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: Uh... no thanks.
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: e6b37ce224adce44eb367bd022021f14, type: 3}
   Lifespan: 3
 --- !u!114 &755830918
 MonoBehaviour:
@@ -5023,7 +5023,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: Right. These guys are like a broken record. Let's just go.
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: c356683b7d89a0544afdd4af1d6b6543, type: 3}
   Lifespan: 4
 --- !u!114 &770742747
 MonoBehaviour:
@@ -5372,7 +5372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: Wrap drive engaged. We'll be there in 3... 2... 1...
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: 2b776adc39f062140b5b34244810a150, type: 3}
   Lifespan: 5
 --- !u!114 &784000783
 MonoBehaviour:
@@ -5493,7 +5493,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: This is it! The spacetime stone!
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: 1c40be307a81a6d49983a80e09934775, type: 3}
   Lifespan: 2
 --- !u!114 &809175211
 MonoBehaviour:
@@ -5784,7 +5784,7 @@ MonoBehaviour:
   TrackDone: 1
   Text: Hear me, and rejoice, General India! For I am Dilley the inevitable, and
     I'm here to eat your planet and steal the Sacred Stone at its core.
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: 0dbab57a9469a9f4eb92aca62f5e0bfb, type: 3}
   Lifespan: 7
 --- !u!114 &834793807
 MonoBehaviour:
@@ -5875,7 +5875,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: Ha ha ha! I'd love to see you try!
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: 3e84c9c16ec63404784c481ed7e46450, type: 3}
   Lifespan: 3
 --- !u!114 &844794246
 MonoBehaviour:
@@ -6103,10 +6103,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cutscenes:
-  - {fileID: 2014685620}
   - {fileID: 770908986}
   - {fileID: 1199285337}
   - {fileID: 1392757362}
+  - {fileID: 2014685620}
 --- !u!1 &931816582
 GameObject:
   m_ObjectHideFlags: 0
@@ -6172,7 +6172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: Ah, Grob. The planet of Bobs.
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: b041befa025b5fe4599ad79b1b75c221, type: 3}
   Lifespan: 3
 --- !u!114 &931816586
 MonoBehaviour:
@@ -6305,7 +6305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: I will summon the Worm of Rhythm to eat your planet, of course!
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: 7a8d58b8b4925ca48b517d26ff46d070, type: 3}
   Lifespan: 4
 --- !u!114 &934182256
 MonoBehaviour:
@@ -7066,7 +7066,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: I
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: 1f78e0efde5b14d458fa20fa6f596e37, type: 3}
   Lifespan: 1
 --- !u!114 &1071517721
 MonoBehaviour:
@@ -7607,7 +7607,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: 'Grunt 1: We''ve got an incoming transmission from Threa, master.'
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: c82c5816c91381b4f9fc6f5728a4071d, type: 3}
   Lifespan: 5
 --- !u!114 &1170936220
 MonoBehaviour:
@@ -8210,7 +8210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: Yes! The space stone is mine.
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: b8b5692c2bb13f74f9495b15c2e8dc16, type: 3}
   Lifespan: 2
 --- !u!114 &1224814761
 MonoBehaviour:
@@ -8371,7 +8371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: Ha ha ha! I know, I know. It's genius!
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: 0ee10b295d243904ea27791dd0d58fe0, type: 3}
   Lifespan: 3
 --- !u!114 &1264647081
 MonoBehaviour:
@@ -8546,7 +8546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: INEVITABLE!
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: edebe1b82b3874642b483bfdc4f85e09, type: 3}
   Lifespan: 1
 --- !u!114 &1386877706
 MonoBehaviour:
@@ -8712,7 +8712,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: This was so much fun!
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: 346cc73fcfd94394295e7a8371abbdfd, type: 3}
   Lifespan: 3
 --- !u!114 &1408212605
 MonoBehaviour:
@@ -9095,7 +9095,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: Wrap drive engaged. We'll be there in 3... 2... 1...
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: 2b776adc39f062140b5b34244810a150, type: 3}
   Lifespan: 5
 --- !u!114 &1459111185
 MonoBehaviour:
@@ -9244,7 +9244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: I know. But fun isn't something one considers when balancing the universe.
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: 600df4acc2d369b4781ce389124ee836, type: 3}
   Lifespan: 4
 --- !u!114 &1525736264
 MonoBehaviour:
@@ -9857,7 +9857,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: This is the best plan ever!
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: 247e6118c0d29934594370fbadc58b36, type: 3}
   Lifespan: 2
 --- !u!114 &1625348202
 MonoBehaviour:
@@ -10408,7 +10408,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: You're so great, master!
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: 9209c3c21ca5a4e46bd972c938d51c05, type: 3}
   Lifespan: 3
 --- !u!114 &1748232248
 MonoBehaviour:
@@ -10687,7 +10687,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: I shall steal the three sacred stones, and use them to...
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: d08866dfd9a3f3047b1c9158b27215d4, type: 3}
   Lifespan: 4
 --- !u!114 &1773282329
 MonoBehaviour:
@@ -11040,7 +11040,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: Nevermind then. Onwards to Grob!
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: 85a5c3e90db8a2848bb55b8728d57d1e, type: 3}
   Lifespan: 3
 --- !u!114 &1888967145
 MonoBehaviour:
@@ -11069,6 +11069,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Parent: {fileID: 0}
+--- !u!1 &1906135625
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1906135627}
+  - component: {fileID: 1906135626}
+  m_Layer: 0
+  m_Name: Stuff
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1906135626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906135625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec57a5dc60b1eb34199c9073359af0ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Ambient
+--- !u!4 &1906135627
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906135625}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1919043573
 GameObject:
   m_ObjectHideFlags: 0
@@ -11322,7 +11367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: He's gone, master.
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: 808da8d1a3228e54f81470fa94a006e0, type: 3}
   Lifespan: 3
 --- !u!114 &2002686556
 MonoBehaviour:
@@ -11489,7 +11534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: Ah, right.
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: 7e50e91bdf57c5c40b1b3fa6231f5168, type: 3}
   Lifespan: 1
 --- !u!114 &2010884036
 MonoBehaviour:
@@ -11970,7 +12015,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: Yes, master! Wrap drive engaged. We'll be there in 3... 2... 1...
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: 103fecdef9a580f469fc9b59c6be4718, type: 3}
   Lifespan: 6
 --- !u!114 &2059619442
 MonoBehaviour:
@@ -12682,107 +12727,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7907682af3c864f4dad9db275128c74b, type: 3}
---- !u!1 &9106573127798437867 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9106573128270971290, guid: 7907682af3c864f4dad9db275128c74b, type: 3}
-  m_PrefabInstance: {fileID: 9106573127798437866}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &9106573127798437868
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9106573127798437867}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c8c0a100024044d4783170cb12e13990, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1001 &9138223999600504788
 PrefabInstance:
   m_ObjectHideFlags: 0
