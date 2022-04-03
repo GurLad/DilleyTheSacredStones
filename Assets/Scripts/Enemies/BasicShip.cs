@@ -14,11 +14,12 @@ public class BasicShip : AEnemy
     public int ProjectileChargeBeats;
     public int LeavingPosBeats;
     public MeshRenderer Renderer;
-    public int GlowMaterialID;
     [Header("Projectiles")]
     public GameObject ProjectileObject;
     public float ProjectileSpeed;
     public Vector3 ProjectileOffset;
+    public int GlowMaterialID;
+    public Color GlowMaterialColor = Color.red;
     protected int spawnBeat;
     protected Mode mode;
 
@@ -97,7 +98,7 @@ public class BasicShip : AEnemy
         {
             if (spawnBeat + ProjectileChargeBeats > Conductor.SongPositionInBeats)
             {
-                Renderer.materials[GlowMaterialID].color = new Color(percent, 0, 0);
+                Renderer.materials[GlowMaterialID].color = GlowMaterialColor * percent;
             }
             else
             {

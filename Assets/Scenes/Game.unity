@@ -409,7 +409,12 @@ MonoBehaviour:
     Object: {fileID: 2152539754460088238, guid: d558e57269254d340b7c9b585a9cd966, type: 3}
   - Name: Block
     Object: {fileID: 1660480629899778513, guid: 01dca9a143276ed49a0a1edd784f452b, type: 3}
+  - Name: LongV
+    Object: {fileID: 6884294365419829538, guid: cc663ccdf564f79478c69d42b9acb565, type: 3}
+  - Name: LongH
+    Object: {fileID: 3956159996714760699, guid: 49e8a5d138685c049bf678e4f81e3b97, type: 3}
   Levels:
+  - {fileID: 4900000, guid: e7656a4b4a9ce93498a3697401abf244, type: 3}
   - {fileID: 4900000, guid: 192e350100fa0ad4f8f489bc0cd6cf09, type: 3}
 --- !u!1 &643390755
 GameObject:

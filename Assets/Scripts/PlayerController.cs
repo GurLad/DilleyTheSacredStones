@@ -56,10 +56,8 @@ public class PlayerController : MonoBehaviour
         {
             if (targetMove != Vector2Int.zero || (targetMove = lastInput) != Vector2Int.zero)
             {
-                Debug.Log("Target move: " + targetMove);
                 Vector2Int targetPos = coords + targetMove;
                 targetPos.Clamp(MIN_COORDS, MAX_COORDS);
-                Debug.Log("Target pos: " + targetPos);
                 if (targetPos != coords)
                 {
                     movingToCoords = targetPos;

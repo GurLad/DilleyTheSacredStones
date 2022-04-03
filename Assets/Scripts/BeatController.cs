@@ -51,7 +51,6 @@ public class BeatController : MonoBehaviour
     public static void RecordMove()
     {
         float accuracy = Conductor.BeatAccuracy(true);
-        Debug.Log(accuracy);
         current.score += accuracy * current.MoveScore * current.multiplier;
         if (accuracy > 0)
         {
