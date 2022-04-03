@@ -6304,7 +6304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TrackDone: 1
-  Text: I will summon the Worm of rhythm to eat your planet, of course!
+  Text: I will summon the Worm of Rhythm to eat your planet, of course!
   VoiceOver: {fileID: 0}
   Lifespan: 4
 --- !u!114 &934182256
