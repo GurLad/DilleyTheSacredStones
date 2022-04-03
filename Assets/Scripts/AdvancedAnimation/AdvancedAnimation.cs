@@ -83,10 +83,7 @@ public class AdvancedAnimation : MonoBehaviour
     private void Awake()
     {
         AdvancedAnimationListeners = new List<IAdvancedAnimationListener>();
-    }
-    // Gets all parts and sets pointers
-    void Start()
-    {
+        // Gets all parts and sets pointers
         if (Main == null)
         {
             if (FindMainByName == "")
@@ -149,6 +146,9 @@ public class AdvancedAnimation : MonoBehaviour
         }
         Debug.Log(ToPrint + "\n---End---\n");
         //End debug
+    }
+    private void Start()
+    {
         if (ActivateOnStart)
         {
             Activate();

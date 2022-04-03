@@ -10,4 +10,12 @@ public class SelectCutscene : MonoBehaviour
     {
         Cutscene.Activate();
     }
+
+    private void Update()
+    {
+        if (Cutscene.Done)
+        {
+            SceneLoader.LoadScene("G");
+        }
+    }
 }

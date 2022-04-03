@@ -17,6 +17,6 @@ public class DilleyAnimationsController : MonoBehaviour
     public static void SetAnimation(string name)
     {
         current.currentAnimation?.Deactivate();
-        (current.currentAnimation = current.Animations.Find(a => a.name.ToLower() == name.ToLower()))?.Activate();
+        (current.currentAnimation = current.Animations.Find(a => a.name.ToLower() == name.ToLower()))?.Activate(true);
     }
 }
