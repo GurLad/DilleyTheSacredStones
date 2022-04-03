@@ -5,7 +5,7 @@ using static GameConsts;
 
 public class BasicShip : AEnemy
 {
-    private enum Mode { ReachingPosition, Shooting, Leaving }
+    protected enum Mode { ReachingPosition, Shooting, Leaving }
 
     public Vector3 StartOffset;
     public Vector3 TargetOffset;
@@ -19,8 +19,8 @@ public class BasicShip : AEnemy
     public GameObject ProjectileObject;
     public float ProjectileSpeed;
     public Vector3 ProjectileOffset;
-    private int spawnBeat;
-    private Mode mode;
+    protected int spawnBeat;
+    protected Mode mode;
 
     public override void Generate(Vector2Int coords)
     {

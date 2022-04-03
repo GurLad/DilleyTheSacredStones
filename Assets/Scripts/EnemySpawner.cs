@@ -40,7 +40,7 @@ public class EnemySpawner : MonoBehaviour
     private void SpawnEnemyFromString(string enemy)
     {
         string[] parts = enemy.Split(",");
-        AEnemy enemyObject = Enemies.Find(a => a.Name.ToLower() == parts[0].ToLower()).Object;
+        AEnemy enemyObject = Enemies.Find(a => a.Name.ToLower() == parts[0].ToLower())?.Object;
         if (enemyObject != null && parts.Length > 2)
         {
             enemyObject = Instantiate(enemyObject);
