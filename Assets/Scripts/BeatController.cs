@@ -16,6 +16,10 @@ public class BeatController : MonoBehaviour
     [Header("Objects")]
     public Image ScoreBar;
     public Vector2 SizeRange;
+    public Image HitDisplay;
+    public Text HitText;
+    public List<Color> HitColors;
+    public List<string> HitTexts;
     private float score;
     private float multiplier = 1;
     private Vector2 baseBarSize;
@@ -40,6 +44,7 @@ public class BeatController : MonoBehaviour
             // Win code
             GameConsts.CurrentLevel++;
             SceneLoader.LoadScene("ShipCutscene");
+            Destroy(this);
         }
     }
 
@@ -56,6 +61,13 @@ public class BeatController : MonoBehaviour
         {
             current.multiplier += accuracy * current.MoveScore * current.MultiplierIncreaseRate;
         }
+    }
+
+    public static void MarkHit(float accuracy)
+    {
+        int mode = accuracy > 0 ? Mathf.FloorToInt(Mathf.Abs(accuracy - 0.00001f) * (current.HitColors.Count - 1)) + 1 : 0;
+        current.HitText.text = current.HitTexts[mode];
+        current.HitDisplay.color = current.HitColors[mode];
     }
 
     public static void RecordHit(float accuracy)

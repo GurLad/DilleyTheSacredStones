@@ -105,6 +105,7 @@ public class PlayerController : MonoBehaviour
             Projectile newProjectile = Instantiate(ProjectileObject.gameObject).GetComponent<Projectile>();
             newProjectile.transform.position = PlayerObject.transform.position + ProjectileOffset;
             BoomBeatAnimation.Activate(newProjectile.SpawnAccuracy = Conductor.BeatAccuracy(false));
+            BeatController.MarkHit(newProjectile.SpawnAccuracy);
             cooldown = ProjectileCooldown;
         }
         cooldown -= Time.deltaTime;

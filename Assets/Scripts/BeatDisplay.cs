@@ -13,13 +13,16 @@ public class BeatDisplay : MonoBehaviour
     private void Start()
     {
         baseSizeDelta = BeatIcon.rectTransform.sizeDelta;
-        basePlanetColor = PlanetIcon.color;
+        basePlanetColor = PlanetIcon?.color ?? Color.white;
     }
 
     private void Update()
     {
         BeatIcon.color = new Color(basePlanetColor.r, basePlanetColor.g, basePlanetColor.b, Mathf.Max(0, 1 - Conductor.TimeSinceLastBeat * 2));
         BeatIcon.rectTransform.sizeDelta = baseSizeDelta * (1 + Conductor.TimeSinceLastBeat / 2);
-        PlanetIcon.color = basePlanetColor * Mathf.Max(1, 1.2f - Conductor.TimeSinceLastBeat);
+        if (PlanetIcon != null)
+        {
+            PlanetIcon.color = basePlanetColor * Mathf.Max(1, 1.2f - Conductor.TimeSinceLastBeat);
+        }
     }
 }

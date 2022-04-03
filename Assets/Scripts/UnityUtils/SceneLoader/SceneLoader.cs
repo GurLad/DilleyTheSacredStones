@@ -25,7 +25,7 @@ public class SceneLoader : MonoBehaviour
         current.Image.gameObject.SetActive(true);
         current.beforeChange = true;
         Time.timeScale = 0;
-        UnityEngine.EventSystems.EventSystem.current.gameObject.SetActive(false);
+        //UnityEngine.EventSystems.EventSystem.current.gameObject.SetActive(false);
     }
     private void Awake()
     {

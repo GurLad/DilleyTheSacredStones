@@ -16,6 +16,7 @@ public class SelectCutscene : MonoBehaviour
         if (Cutscenes[GameConsts.CurrentLevel].Done)
         {
             SceneLoader.LoadScene("Game");
+            Destroy(this);
         }
     }
 }
