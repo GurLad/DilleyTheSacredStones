@@ -12,7 +12,7 @@ public class SceneLoader : MonoBehaviour
     private string target;
     private float count;
     private bool? beforeChange = null;
-    private Color white = Color.white;
+    private Color white = Color.black;
     public static void LoadScene(string name)
     {
         if (current.beforeChange != null)

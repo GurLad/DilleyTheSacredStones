@@ -37,9 +37,9 @@ public class BeatController : MonoBehaviour
         }
         else
         {
-            // Win code TBA
-            score = TargetScore;
-            UpdateBarSize();
+            // Win code
+            GameConsts.CurrentLevel++;
+            SceneLoader.LoadScene("ShipCutscene");
         }
     }
 

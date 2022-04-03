@@ -27,6 +27,37 @@ public class BasicShip : AEnemy
         spawnBeat = Conductor.SongPositionInBeats;
         mode = Mode.ReachingPosition;
         Vector3 realWorldCoords = new Vector3(coords.x, coords.y) * SHIP_SIZE;
+        ProcessOffsets(coords, realWorldCoords);
+    }
+
+    private void Update()
+    {
+        int currentStepBeats = mode switch
+        {
+            Mode.ReachingPosition => ReachingPosBeats,
+            Mode.Shooting => ProjectileChargeBeats,
+            Mode.Leaving => LeavingPosBeats,
+            _ => throw new System.Exception("Impossible")
+        };
+        float percent = Mathf.Min(1, ((Conductor.SongPositionInBeats - spawnBeat) + Conductor.TimeSinceLastBeat) / currentStepBeats);
+        switch (mode)
+        {
+            case Mode.ReachingPosition:
+                ReachingPositionStep(percent);
+                break;
+            case Mode.Shooting:
+                ShootingStep(percent);
+                break;
+            case Mode.Leaving:
+                LeavingStep(percent);
+                break;
+            default:
+                break;
+        }
+    }
+
+    protected virtual void ProcessOffsets(Vector2Int coords, Vector3 realWorldCoords)
+    {
         if (coords.y < 0)
         {
             StartOffset.y *= -1;
@@ -40,64 +71,60 @@ public class BasicShip : AEnemy
         TargetOffset += realWorldCoords;
         StartOffset += realWorldCoords;
         OutsideOffset += realWorldCoords;
-        Renderer.materials[GlowMaterialID] = Instantiate(Renderer.materials[GlowMaterialID]);
-        Renderer.materials[GlowMaterialID].color = Color.black;
+        if (GlowMaterialID > 0)
+        {
+            Renderer.materials[GlowMaterialID] = Instantiate(Renderer.materials[GlowMaterialID]);
+            Renderer.materials[GlowMaterialID].color = Color.black;
+        }
     }
 
-    private void Update()
+    protected virtual void ReachingPositionStep(float percent)
     {
-        float percent;
-        switch (mode)
+        percent = Mathf.Sqrt(percent);
+        transform.position = StartOffset * (1 - percent) + TargetOffset * percent;
+        transform.position += new Vector3(0, 0, PlayerController.ZPos);
+        if (percent >= 1)
         {
-            case Mode.ReachingPosition:
-                percent = Mathf.Min(1, ((Conductor.SongPositionInBeats - spawnBeat) + Conductor.TimeSinceLastBeat) / ReachingPosBeats);
-                percent = Mathf.Sqrt(percent);
-                transform.position = StartOffset * (1 - percent) + TargetOffset * percent;
-                transform.position += new Vector3(0, 0, PlayerController.ZPos);
-                if (percent >= 1)
-                {
-                    mode = Mode.Shooting;
-                    spawnBeat = Conductor.SongPositionInBeats;
-                }
-                break;
-            case Mode.Shooting:
-                transform.position = TargetOffset + new Vector3(0, 0, PlayerController.ZPos);
-                if (ProjectileObject != null)
-                {
-                    if (spawnBeat + ProjectileChargeBeats > Conductor.SongPositionInBeats)
-                    {
-                        percent = Mathf.Min(1, ((Conductor.SongPositionInBeats - spawnBeat) + Conductor.TimeSinceLastBeat) / ProjectileChargeBeats);
-                        Renderer.materials[GlowMaterialID].color = new Color(percent, 0, 0);
-                    }
-                    else
-                    {
-                        // Generate projectile
-                        GameObject projectile = Instantiate(ProjectileObject);
-                        projectile.transform.position = transform.position + ProjectileOffset;
-                        spawnBeat = Conductor.SongPositionInBeats;
-                        ProjectileObject = null;
-                        Renderer.materials[GlowMaterialID].color = Color.black;
-                    }
-                }
-                else if (Conductor.SongPositionInBeats > spawnBeat)
-                {
-                    // Finish
-                    mode = Mode.Leaving;
-                    spawnBeat = Conductor.SongPositionInBeats;
-                }
-                break;
-            case Mode.Leaving:
-                percent = Mathf.Min(1, ((Conductor.SongPositionInBeats - spawnBeat) + Conductor.TimeSinceLastBeat) / LeavingPosBeats);
-                percent = Mathf.Pow(percent, 2);
-                transform.position = TargetOffset * (1 - percent) + OutsideOffset * percent;
-                transform.position += new Vector3(0, 0, PlayerController.ZPos);
-                if (percent >= 1)
-                {
-                    Destroy(gameObject);
-                }
-                break;
-            default:
-                break;
+            mode = Mode.Shooting;
+            spawnBeat = Conductor.SongPositionInBeats;
+        }
+    }
+
+    protected virtual void ShootingStep(float percent)
+    {
+        transform.position = TargetOffset + new Vector3(0, 0, PlayerController.ZPos);
+        if (ProjectileObject != null)
+        {
+            if (spawnBeat + ProjectileChargeBeats > Conductor.SongPositionInBeats)
+            {
+                Renderer.materials[GlowMaterialID].color = new Color(percent, 0, 0);
+            }
+            else
+            {
+                // Generate projectile
+                GameObject projectile = Instantiate(ProjectileObject);
+                projectile.transform.position = transform.position + ProjectileOffset;
+                spawnBeat = Conductor.SongPositionInBeats;
+                ProjectileObject = null;
+                Renderer.materials[GlowMaterialID].color = Color.black;
+            }
+        }
+        else if (Conductor.SongPositionInBeats > spawnBeat)
+        {
+            // Finish
+            mode = Mode.Leaving;
+            spawnBeat = Conductor.SongPositionInBeats;
+        }
+    }
+
+    protected virtual void LeavingStep(float percent)
+    {
+        percent = Mathf.Pow(percent, 2);
+        transform.position = TargetOffset * (1 - percent) + OutsideOffset * percent;
+        transform.position += new Vector3(0, 0, PlayerController.ZPos);
+        if (percent >= 1)
+        {
+            Destroy(gameObject);
         }
     }
 }

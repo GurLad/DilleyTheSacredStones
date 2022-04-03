@@ -5,13 +5,13 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public List<EnemyType> Enemies;
-    public TextAsset Level;
+    public List<TextAsset> Levels;
     private List<string> lines;
     private int lastLine = -1;
 
     private void Start()
     {
-        lines = new List<string>(Level.text.Replace("\r", "").Split("\n"));
+        lines = new List<string>(Levels[GameConsts.CurrentLevel].text.Replace("\r", "").Split("\n"));
     }
 
     private void Update()

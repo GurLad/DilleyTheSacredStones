@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class SelectCutscene : MonoBehaviour
 {
-    public TCutscene Cutscene;
+    public List<TCutscene> Cutscenes;
 
     private void Start()
     {
-        Cutscene.Activate();
+        Cutscenes[GameConsts.CurrentLevel].Activate();
     }
 
     private void Update()
     {
-        if (Cutscene.Done)
+        if (Cutscenes[GameConsts.CurrentLevel].Done)
         {
-            SceneLoader.LoadScene("G");
+            SceneLoader.LoadScene("Game");
         }
     }
 }
