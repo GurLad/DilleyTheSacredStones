@@ -329,7 +329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: WE ARE BOB. YOU WILL BECOME BOB. FIGHTING IS USELESS.
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: be0cdb5dd9a648e4383fce1288397c0b, type: 3}
   Lifespan: 2
 --- !u!114 &59917332
 MonoBehaviour:
@@ -497,7 +497,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: What?! How can you eat a planet?
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: ffd1825d80d23b54289b3041c5dbfb19, type: 3}
   Lifespan: 4
 --- !u!114 &80134018
 MonoBehaviour:
@@ -1536,7 +1536,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: WE ARE BOB. YOU WILL BECOME BOB. FIGHTING IS USELESS.
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: be0cdb5dd9a648e4383fce1288397c0b, type: 3}
   Lifespan: 3
 --- !u!114 &220558212
 MonoBehaviour:
@@ -2928,7 +2928,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: Destroying it?! Why would you do that?
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: 6ba9f32e8d84ce9408d9c8b18fbcb58a, type: 3}
   Lifespan: 3
 --- !u!114 &472999156
 MonoBehaviour:
@@ -3035,7 +3035,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: This is General India of Threa! Who are you, and what are your intentions?
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: e24c455d4691ffc48a7c6ec9c2998f6a, type: 3}
   Lifespan: 5
 --- !u!114 &501251113
 MonoBehaviour:
@@ -3774,7 +3774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: No, don't! Please, I'll do anything!
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: a52b1a6f0756bbc41a2a674fbd0a8998, type: 3}
   Lifespan: 2
 --- !u!114 &651298060
 MonoBehaviour:
@@ -6195,10 +6195,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cutscenes:
-  - {fileID: 2014685620}
   - {fileID: 770908986}
   - {fileID: 1199285337}
   - {fileID: 1392757362}
+  - {fileID: 2014685620}
 --- !u!1 &931816582
 GameObject:
   m_ObjectHideFlags: 0
@@ -9773,7 +9773,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: No! Not the Worm! I must stop you!
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: 22cfef9be9db75d49ab60a02523935b5, type: 3}
   Lifespan: 3
 --- !u!114 &1601582482
 MonoBehaviour:
@@ -11849,7 +11849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackDone: 1
   Text: WE ARE BOB. YOU WILL BECOME BOB. FIGHTING IS USELESS.
-  VoiceOver: {fileID: 0}
+  VoiceOver: {fileID: 8300000, guid: be0cdb5dd9a648e4383fce1288397c0b, type: 3}
   Lifespan: 2
 --- !u!114 &2031736567
 MonoBehaviour:
