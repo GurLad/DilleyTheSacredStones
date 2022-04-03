@@ -56,7 +56,7 @@ public class Conductor : MonoBehaviour
     {
         //Load the AudioSource attached to the Conductor GameObject
         musicSource = GetComponent<AudioSource>();
-        PlaySong(Songs[0].Name);
+        //PlaySong(Songs[0].Name);
     }
 
     private void Update()
