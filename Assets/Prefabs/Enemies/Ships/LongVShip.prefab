@@ -47,10 +47,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Explosion: {fileID: 3802753158492964203, guid: ea3c490c9e183ed408e35545b0df2713, type: 3}
-  StartOffset: {x: 0, y: 20, z: 8}
+  StartOffset: {x: 0, y: 15, z: 8}
   TargetOffset: {x: 0, y: 0, z: 8}
-  OutsideOffset: {x: 0, y: 20, z: 8}
-  ReachingPosBeats: 3
+  OutsideOffset: {x: 0, y: 15, z: 8}
+  ReachingPosBeats: 2
   ProjectileChargeBeats: 3
   LeavingPosBeats: 2
   Renderer: {fileID: 4364703495869928641}

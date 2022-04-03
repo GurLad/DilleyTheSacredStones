@@ -12,7 +12,7 @@ public class LongShip : BasicShip
         if (Vertical)
         {
             finalCoords.y = Mathf.Min(coords.y, 0) + 0.5f;
-            if (finalCoords.y > 0)
+            if (finalCoords.y < 0)
             {
                 StartOffset.y *= -1;
                 OutsideOffset.y *= -1;
@@ -21,7 +21,7 @@ public class LongShip : BasicShip
         else
         {
             finalCoords.x = Mathf.Min(coords.x, 0) + 0.5f;
-            if (finalCoords.x > 0)
+            if (finalCoords.x < 0)
             {
                 StartOffset.x *= -1;
                 OutsideOffset.x *= -1;

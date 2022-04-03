@@ -33,7 +33,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6884294365419829538, guid: cc663ccdf564f79478c69d42b9acb565, type: 3}
       propertyPath: StartOffset.x
-      value: 20
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 6884294365419829538, guid: cc663ccdf564f79478c69d42b9acb565, type: 3}
       propertyPath: StartOffset.y
@@ -41,7 +41,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6884294365419829538, guid: cc663ccdf564f79478c69d42b9acb565, type: 3}
       propertyPath: OutsideOffset.x
-      value: 20
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 6884294365419829538, guid: cc663ccdf564f79478c69d42b9acb565, type: 3}
       propertyPath: OutsideOffset.y
@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 1808891552920933791, guid: d9faf49033ef567429c68429877dcf01, type: 3}
     - target: {fileID: 6884294365419829538, guid: cc663ccdf564f79478c69d42b9acb565, type: 3}
       propertyPath: ReachingPosBeats
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6884294365419829541, guid: cc663ccdf564f79478c69d42b9acb565, type: 3}
       propertyPath: m_Name

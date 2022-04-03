@@ -356,7 +356,7 @@ MonoBehaviour:
   MoveScore: 0.5
   HitScore: 10
   TakeDamageScore: 10
-  MultiplierIncreaseRate: 0.01
+  MultiplierIncreaseRate: 0.02
   DecayRate: 1
   ScoreBar: {fileID: 2057393047}
   SizeRange: {x: 200, y: 675}
