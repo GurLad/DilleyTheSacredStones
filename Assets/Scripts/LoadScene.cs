@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LoadScene : MonoBehaviour
+public class LoadScene : Trigger
 {
     public string Name;
 
-    public void Click()
+    public override void Activate()
     {
         SceneLoader.LoadScene(Name);
     }
