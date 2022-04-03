@@ -19,9 +19,9 @@ public class WormCutscene : ContinuousTrigger
         if (activated)
         {
             Worm.position += new Vector3(0, 0, WormSpeed) * Time.deltaTime;
-            if (Worm.position.z > EatPos && Planet != null)
+            if (Worm.position.z > EatPos && Planet.activeSelf)
             {
-                Destroy(Planet);
+                Planet.SetActive(false);
                 Stone.SetActive(true);
                 SoundController.PlaySound(SFX);
             }

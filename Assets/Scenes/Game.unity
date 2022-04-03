@@ -520,8 +520,8 @@ MonoBehaviour:
   - Name: LongH
     Object: {fileID: 3956159996714760699, guid: 49e8a5d138685c049bf678e4f81e3b97, type: 3}
   Levels:
-  - {fileID: 4900000, guid: 192e350100fa0ad4f8f489bc0cd6cf09, type: 3}
   - {fileID: 4900000, guid: e7656a4b4a9ce93498a3697401abf244, type: 3}
+  - {fileID: 4900000, guid: 192e350100fa0ad4f8f489bc0cd6cf09, type: 3}
 --- !u!1 &643390755
 GameObject:
   m_ObjectHideFlags: 0
