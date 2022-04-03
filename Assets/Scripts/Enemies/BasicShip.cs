@@ -29,6 +29,7 @@ public class BasicShip : AEnemy
         mode = Mode.ReachingPosition;
         Vector3 realWorldCoords = new Vector3(coords.x, coords.y) * SHIP_SIZE;
         ProcessOffsets(coords, realWorldCoords);
+        transform.position = StartOffset + new Vector3(0, 0, PlayerController.ZPos);
     }
 
     private void Update()
