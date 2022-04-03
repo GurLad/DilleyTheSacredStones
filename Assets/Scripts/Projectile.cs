@@ -9,6 +9,8 @@ public class Projectile : MonoBehaviour
     public float ShrinkRate;
     public bool UseForward;
     public bool NoRigidBody;
+    [HideInInspector]
+    public float SpawnAccuracy;
     private float count;
     private Vector3 baseScale;
 

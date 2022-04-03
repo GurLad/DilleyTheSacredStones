@@ -12,6 +12,7 @@ public abstract class AEnemy : MonoBehaviour
     {
         if (other.tag == "PlayerProjectile")
         {
+            BeatController.RecordHit(other.GetComponent<Projectile>().SpawnAccuracy);
             Destroy(gameObject);
             Destroy(other.gameObject);
             Instantiate(Explosion).transform.position = transform.position;

@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     public Projectile ProjectileObject;
     public float ProjectileRelativeSpeed;
     public Vector3 ProjectileOffset;
+    public BoomBeatAnimation BoomBeatAnimation;
     private Vector2Int coords = Vector2Int.zero;
     private AudioSource audioSource;
     // Move vars
@@ -42,9 +43,9 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        ProjectileInput();
         MoveXY();
         MoveZ();
-        ProjectileInput();
         hitCooldown -= Time.deltaTime;
     }
 
@@ -64,6 +65,7 @@ public class PlayerController : MonoBehaviour
                     movingToCoords = targetPos;
                     count = 0;
                     audioSource.PlayOneShot(MoveSFX);
+                    BeatController.RecordMove();
                 }
             }
             lastInput = Vector2Int.zero;
@@ -104,6 +106,7 @@ public class PlayerController : MonoBehaviour
         {
             Projectile newProjectile = Instantiate(ProjectileObject.gameObject).GetComponent<Projectile>();
             newProjectile.transform.position = PlayerObject.transform.position + ProjectileOffset;
+            BoomBeatAnimation.Activate(newProjectile.SpawnAccuracy = Conductor.BeatAccuracy(false));
             cooldown = ProjectileCooldown;
         }
         cooldown -= Time.deltaTime;
@@ -118,6 +121,7 @@ public class PlayerController : MonoBehaviour
             {
                 Instantiate(Explosion).transform.position = transform.position;
                 hitCooldown = InvincibilityTime;
+                BeatController.RecordTakeDamage();
             }
         }
     }

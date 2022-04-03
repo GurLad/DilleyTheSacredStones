@@ -101,12 +101,18 @@ public class Conductor : MonoBehaviour
 
     public static float TimeSinceLastBeat { get => instance.positionInBeat; }
 
-    public static float BeatAccuracy
+    public static float BeatAccuracy(bool allowNegative = false)
     {
-        get
+        float trueAccuracy = 0.5f - Mathf.Min(instance.positionInBeat, 1 - instance.positionInBeat);
+        if (!allowNegative)
         {
-            float trueAccuracy = 0.5f - Mathf.Min(instance.positionInBeat, 1 - instance.positionInBeat);
-            return trueAccuracy < MIN_ACCURACY ? (MIN_ACCURACY - trueAccuracy) / MIN_ACCURACY : 0;
+            return trueAccuracy > MIN_ACCURACY ? (trueAccuracy - MIN_ACCURACY) /  (0.5f - MIN_ACCURACY) : 0;
+        }
+        else
+        {
+            return
+                 trueAccuracy > MIN_ACCURACY ? (trueAccuracy - MIN_ACCURACY) / (0.5f - MIN_ACCURACY) : 
+                (trueAccuracy < (0.5f - MIN_ACCURACY) ? -(0.5f - MIN_ACCURACY - trueAccuracy) / (0.5f - MIN_ACCURACY) : 0);
         }
     }
 
