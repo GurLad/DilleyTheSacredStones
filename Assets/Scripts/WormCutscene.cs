@@ -9,7 +9,7 @@ public class WormCutscene : ContinuousTrigger
     public float EndPos;
     public Transform Worm;
     public GameObject Planet;
-    public GameObject Stone;
+    public List<GameObject> Stone;
     public AudioClip Sound;
     public AudioClip SFX;
     private bool activated;
@@ -22,7 +22,7 @@ public class WormCutscene : ContinuousTrigger
             if (Worm.position.z > EatPos && Planet.activeSelf)
             {
                 Planet.SetActive(false);
-                Stone.SetActive(true);
+                Stone[GameConsts.CurrentLevel].SetActive(true);
                 SoundController.PlaySound(SFX);
             }
             else if (Worm.position.z > EndPos)
